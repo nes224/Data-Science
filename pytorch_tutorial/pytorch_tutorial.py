@@ -10,9 +10,22 @@ import torch
 # print(x.size())
 # print(x)
 
-x = torch.rand(2,2)
-y = torch.rand(2,2)
-print(x)
-print(y)
-z = x + y
-print(z)
+# x = torch.rand(2,2)
+# y = torch.rand(2,2)
+# print(x)
+# print(y)
+# z = x + y
+# z = torch.add(x,y)
+# print(z)
+
+# z = x - y
+# z = torch.sub(x,y)
+# print(z)
+
+# z = x * y
+# z = torch.mul(x,y)
+# print(z)
+
+# z = x / y
+# z = torch.div(x,y)
+# print(z)
