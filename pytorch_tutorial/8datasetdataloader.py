@@ -48,5 +48,18 @@ for epoch in range(num_epochs):
         if (i+1) % 5 == 0:
             print(f'epoch {epoch+1}/{num_epochs}, step {i+1}/{n_iterations}, inputs {inputs.shape}')
 
-torchvision.datasets.MNIST()
 # fashion-mnist,, cifar, coco
+train_dataset = torchvision.datasets.MNIST(root='./data',
+                                           train=True,
+                                           transform=torchvision.transforms.ToTensor(),
+                                           download=True
+                                           )
+train_loader = DataLoader(dataset=train_dataset,
+                          batch_size=3,
+                          shuffle=True
+                          )
+
+dataiter = iter(train_loader)
+data = next(dataiter)
+inputs, targets = data
+print(inputs.shape, targets.shape)
